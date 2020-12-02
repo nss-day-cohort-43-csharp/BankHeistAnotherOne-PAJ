@@ -9,7 +9,7 @@ namespace BankHeist
     public void PerformSkill(Bank bank)
     {
       bank.AlarmScore -= SkillLevel;
-      System.Console.WriteLine($"{Name} is hacking the alarm system. decreased security {SkillLevel} poins.");
+      System.Console.WriteLine($"{Name} is hacking the alarm system. decreased security {SkillLevel} points.");
       if (bank.AlarmScore <= 0)
       {
         System.Console.WriteLine($"{Name} has disabled the alarms.");
