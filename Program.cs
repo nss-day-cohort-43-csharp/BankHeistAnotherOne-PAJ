@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BankHeist2
+namespace BankHeist
 {
     class Program
     {
