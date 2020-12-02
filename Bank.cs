@@ -1,4 +1,5 @@
 using System;
+
 namespace BankHeist
 {
     public class Bank
@@ -7,11 +8,16 @@ namespace BankHeist
         public int AlarmScore { get; set; }
         public int VaultScore { get; set; }
         public int SecurityGuardScore { get; set; }
-
         public bool IsSecure()
         {
-            if (AlarmScore + VaultScore + SecurityGuardScore <= 0) { return false; }
-            return true;
+            if (AlarmScore + VaultScore + SecurityGuardScore <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
