@@ -139,6 +139,24 @@ namespace BankHeist
                 }
             }
             printCrew();
+            foreach(IRobber robber in crew){
+                robber.PerformSkill(bank);
+            }
+            if(!bank.IsSecure()){
+                System.Console.WriteLine("The bank is still secure. Heist failed");
+            }else{
+                System.Console.WriteLine("WE DID IT!!! Heist successful");
+                double totalPayout=0;
+                System.Console.WriteLine(bank.CashOnHand);
+                foreach(IRobber member in crew){
+                    double memberPay=bank.CashOnHand*(member.PercentageCut/100.00);
+                    System.Console.WriteLine($"{member.PercentageCut}");
+                    System.Console.WriteLine($"{member.Name} is payed ${memberPay}");
+                    totalPayout+=memberPay;
+                }
+                double myPay=bank.CashOnHand-totalPayout;
+                System.Console.WriteLine($"I earned a total of ${myPay}");
+                }
         }
     }
 }
