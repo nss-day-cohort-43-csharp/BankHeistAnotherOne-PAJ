@@ -15,5 +15,9 @@ namespace BankHeist
         System.Console.WriteLine($"{Name} has disabled the alarms.");
       }
     }
+    public string getSpec()
+    {
+      return "Hacker";
+    }
   }
 }

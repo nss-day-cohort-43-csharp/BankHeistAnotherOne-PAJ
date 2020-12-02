@@ -15,5 +15,9 @@ namespace BankHeist
         System.Console.WriteLine($"{Name} has knocked out the guards.");
       }
     }
+    public string getSpec()
+    {
+      return "Muscle";
+    }
   }
 }
