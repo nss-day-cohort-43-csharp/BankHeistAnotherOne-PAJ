@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace BankHeist2
+namespace BankHeist
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      Console.WriteLine("Hello World!");
     }
+  }
 }
