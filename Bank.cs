@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections.Generic;
 namespace BankHeist
 {
     public class Bank
@@ -24,6 +24,31 @@ namespace BankHeist
             {
                 return true;
             }
+        }
+
+        public List<string> compair(){
+            List<string> recon=new List<string>();
+            if(AlarmScore>VaultScore&&AlarmScore>SecurityGuardScore){
+                recon.Add("Alarm");
+                if(VaultScore>SecurityGuardScore){
+                    recon.Add("Security Guard");
+                }
+                else{
+                    recon.Add("Vault");
+                }
+            }
+            else if (VaultScore>SecurityGuardScore){
+                recon.Add("vault");
+                if(AlarmScore>SecurityGuardScore){
+                    recon.Add("Security Guard");
+                }else{recon.Add("Alarm");}
+            }else{
+                recon.Add("Security Guard");
+                if(VaultScore>AlarmScore){
+                    recon.Add("Alaram");
+                }else{recon.Add("Vault");}
+            }
+            return recon;
         }
     }
 }

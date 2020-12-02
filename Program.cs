@@ -77,6 +77,9 @@ namespace BankHeist
             }
             Random random=new Random();
             Bank bank= new Bank(random.Next(50000,1000001), random.Next(101), random.Next(101),random.Next(101));
+            List<string> recon=bank.compair();
+            System.Console.WriteLine($"The most secure system is {recon[0]}");
+            System.Console.WriteLine($"The least secure system is {recon[1]}");
         }
     }
 }
