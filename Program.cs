@@ -75,6 +75,8 @@ namespace BankHeist
                 }
 
             }
+            Random random=new Random();
+            Bank bank= new Bank(random.Next(50000,1000001), random.Next(101), random.Next(101),random.Next(101));
         }
     }
 }
